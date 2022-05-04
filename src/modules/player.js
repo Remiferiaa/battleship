@@ -7,13 +7,13 @@ const player = (name, turn) => {
 
 const player1 = player('player', 1);
 const player2 = player('comp', 2);
-const playerGrid = gameBoard();
-const compGrid = gameBoard();
+let playerGrid = gameBoard();
+let compGrid = gameBoard();
 
 let currentTurn = 1;
 
 function shipGenerator() {
-    let block = [];
+    const block = [];
     const carrier = ships('e');
     const battleship = ships('d');
     const cruiser = ships('c');
@@ -145,8 +145,8 @@ function restart() {
             compGrid.board[i][j] = null;
         }
     }
-    playerGrid.shipList = [];
-    compGrid.shipList = [];
+    playerGrid = gameBoard()
+    compGrid = gameBoard();
     currentTurn = 1;
 }
 
