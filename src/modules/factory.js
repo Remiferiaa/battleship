@@ -9,7 +9,7 @@ const ships = (type) => {
     }
     const shapes = {
         a: {
-            stats: [{ boat: 1, big: 3, hp: 3 }],
+            stats: [{ boat: 1, big: 2, hp: 2 }],
             hitStat: hit,
             sunken: sinkState
         },
@@ -19,7 +19,7 @@ const ships = (type) => {
             sunken: sinkState
         },
         c: {
-            stats: [{ boat: 3, big: 4, hp: 4 }],
+            stats: [{ boat: 3, big: 3, hp: 3 }],
             hitStat: hit,
             sunken: sinkState
         },
