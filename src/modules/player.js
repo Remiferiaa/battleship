@@ -139,12 +139,6 @@ function turnHandler() {
 }
 
 function restart() {
-    for (let i = 0; i < 10; i++) {
-        for (j = 0; j < 10; j++) {
-            playerGrid.board[i][j] = null;
-            compGrid.board[i][j] = null;
-        }
-    }
     playerGrid = gameBoard()
     compGrid = gameBoard();
     currentTurn = 1;
