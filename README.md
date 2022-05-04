@@ -1,6 +1,6 @@
 Battleship Project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-battleship)
 
-[Live Demo](remiferiaa.github.io/battleship/)
+[Live Demo](https://remiferiaa.github.io/battleship/)
 
 TDD is good. Will try to use more of it as i get more and more used to it. 
 Gotten too used to console.log and DOM methods
