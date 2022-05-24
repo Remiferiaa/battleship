@@ -116,8 +116,9 @@ body {
     transform: translate(0.95);
 }
 
-#bot > .empty:hover {
+#bot > .target:hover {
     background-color: rgba(255, 255, 255, 0.4);
+    cursor: crosshair;
 }
 
 @keyframes place {

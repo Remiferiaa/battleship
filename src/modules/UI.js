@@ -8,19 +8,30 @@ function gridDisplay(frame, state) {
             gameCell.className = 'cells';
             gameCell.setAttribute('data-cell', `${i}${j}`);
 
-            if (frame.board[i][j] === null) {
-                gameCell.classList.remove('filled', 'miss', 'hit');
-                gameCell.classList.add('empty');
-            } else if (frame.board[i][j] == 'X') {
-                gameCell.classList.remove('empty', 'filled', 'hit');
-                gameCell.classList.add('miss');
-            } else if (frame.board[i][j] == 'Y') {
-                gameCell.classList.remove('empty', 'filled', 'miss');
-                gameCell.classList.add('hit');
-            } else {
-                gameCell.classList.remove('empty', 'miss', 'hit');
-                if (state !== 'bot') {
+            if (state !== "bot") {
+                if (frame.board[i][j] === null) {
+                    gameCell.classList.remove('filled', 'miss', 'hit');
+                    gameCell.classList.add('empty');
+                } else if (frame.board[i][j] == 'X') {
+                    gameCell.classList.remove('empty', 'filled', 'hit');
+                    gameCell.classList.add('miss');
+                } else if (frame.board[i][j] == 'Y') {
+                    gameCell.classList.remove('empty', 'filled', 'miss');
+                    gameCell.classList.add('hit');
+                } else {
+                    gameCell.classList.remove('empty', 'miss', 'hit');
                     gameCell.classList.add('filled');
+                }
+
+            } else if(state === "bot") {
+                if (frame.board[i][j] == 'X') {
+                    gameCell.classList.remove('hit','target');
+                    gameCell.classList.add('miss');
+                } else if (frame.board[i][j] == 'Y') {
+                    gameCell.classList.remove('miss','target');
+                    gameCell.classList.add('hit');
+                } else {
+                    gameCell.classList.add('target');
                 }
             }
             gameGrid.append(gameCell);
