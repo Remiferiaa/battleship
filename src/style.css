@@ -12,6 +12,9 @@ body {
 }
 
 .preGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -166,7 +169,28 @@ body {
 }
 
 @media screen and (max-width: 950px) {
+    .preGame {
+        padding: 6px;
+    }
     .gridHold {
-        flex-direction: column;
+        gap: 24px;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .grid {
+        width: 100px;
+        height: 100px;
+    }
+
+    .grid1, .grid2 {
+        padding: 6px;
+    }
+
+    .preGame > h1 {
+        font-size: 0.8rem;
+    }
+
+    .header {
+        font-size: 1.5rem;
     }
 }
